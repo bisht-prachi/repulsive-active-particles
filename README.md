@@ -6,3 +6,4 @@ The steady state picture:
   Two alternating lanes consisting of particle clusters, moving in opposite directions respectively.
   
  
+![antialigners1](https://user-images.githubusercontent.com/103419553/211003772-ab60ea33-4187-4a5c-b5b1-b95af355f438.png)
