@@ -47,14 +47,17 @@ def simulate(coord):
                sx = np.sum(np.cos(theta[neighbors]))
                sy = np.sum(np.sin(theta[neighbors]))
                theta[i] = np.arctan2(-sy,-sx)             
-               
+            
+           #add randomness
            theta = theta + eta*(np.random.rand(N,1)-0.5)
            
+           #update coordinates
            for i in range(len(coord)):
                coord[i][0] = x[i]
                coord[i][1] = y[i]
                coord[i][2]  = theta[i]            
-                   
+               
+           #shuffle the particle order        
            np.random.shuffle(coord)          
                
            # if plotRealTime or (t == Nt - 1):     
