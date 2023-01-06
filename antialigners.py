@@ -46,7 +46,9 @@ def simulate(coord):
                neighbors = (x-x[i])**2 + (y-y[i])**2 < R**2
                sx = np.sum(np.cos(theta[neighbors]))
                sy = np.sum(np.sin(theta[neighbors]))
-               theta[i] = np.arctan2(-sy,-sx)             
+               theta[i] = np.arctan2(-sy,-sx) 
+               #or
+               #theta[i] = np.arctan2(sy,sx) + np.pi
             
            #add randomness
            theta = theta + eta*(np.random.rand(N,1)-0.5)
