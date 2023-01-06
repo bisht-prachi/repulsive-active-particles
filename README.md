@@ -7,3 +7,5 @@ The steady state picture:
   
  
 ![antialigners1](https://user-images.githubusercontent.com/103419553/211003772-ab60ea33-4187-4a5c-b5b1-b95af355f438.png)
+
+https://github.com/bisht-prachi/anti-aligners-spp/blob/main/antialigners1.png
