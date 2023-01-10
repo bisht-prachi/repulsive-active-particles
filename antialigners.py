@@ -10,11 +10,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random, time
 
-#comment this out if latex is not installed
-plt.rcParams['text.usetex'] = True
-plt.rcParams['font.size'] = '12'
-
-
 np.random.seed(seed=int(time.time()))      
 
 #simulation parameters
@@ -27,7 +22,9 @@ Nt       = 2000
 N        = 10000
 plotRealTime = True
 
-def simulate(coord):      
+def simulate(coord):    
+       # fig = plt.figure(figsize=(4,4), dpi=80)
+       # ax = plt.gca()
        
        #run
        for t in range(Nt):
@@ -70,3 +67,11 @@ def simulate(coord):
        return 0
    
        
+if __name__ == "__main__":
+    coord = np.random.rand(N,3)
+    for i in range(len(coord)):
+        coord[i][0] *= L
+        coord[i][1] *= L
+        coord[i][2]  = 2 * np.pi * (coord[i][2] - 0.5)
+        
+    simulate(coord)
