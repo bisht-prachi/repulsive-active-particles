@@ -1,12 +1,11 @@
 # anti-aligners-spp
 A model for anti-aligning self propelled particles. 
-The orientation update rule is asynchronous as opposed the synchronous update rule implemented in traditional Vicsek model. 
-While finding the average angle of a neighbourhood, pi is added to the final value in order to mimic the effect of "repulsion".
+The orientation update rule is asynchronous as opposed to the synchronous update rule implemented in traditional Vicsek model. 
+The particle orientation are **sequentially** updated in the first step. The average orientation of a particle's neighbourhood
+is evaluated, the said particle assumes an orientation = (average + pi), thus effectuating a *repulsive* inter-particle interaction.
+In the second step, all particles move simultaneously.
 
 The steady state picture:
   Two alternating lanes consisting of particle clusters, moving in opposite directions respectively.
   
- 
-![antialigners1](https://user-images.githubusercontent.com/103419553/211003772-ab60ea33-4187-4a5c-b5b1-b95af355f438.png)
 
-https://github.com/bisht-prachi/anti-aligners-spp/blob/main/antialigners1.png
